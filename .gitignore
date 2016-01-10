@@ -1,0 +1,12 @@
+.env
+Dockerfile
+docker-compose.yml
+node_modules
+public/
+src/client/lib
+
+# Sass
+.sass-cache
+
+# Build Stuff
+dist/
