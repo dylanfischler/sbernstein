@@ -1,8 +1,11 @@
 {
-  "name": "Node.js Getting Started",
-  "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/heroku/node-js-getting-started",
-  "logo": "http://node-js-sample.herokuapp.com/node.svg",
-  "keywords": ["node", "express", "static"],
+  "name": "sbernstein",
+  "description": "",
+  "repository": "https://git.heroku.com/sbernstein",
+  "keywords": [
+    "node",
+    "express",
+    "static"
+  ],
   "image": "heroku/nodejs"
 }

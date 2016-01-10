@@ -21,12 +21,9 @@ Database configuration details are defined in your environment as well. Add `exp
 
 ```
 $ heroku create
-$ git push heroku master
+$ heroku docker:release
 $ heroku open
 ```
-or
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## Documentation
 
