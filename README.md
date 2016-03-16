@@ -17,7 +17,7 @@ Database configuration details are defined in your environment as well. Add `exp
 #### Live Building
 `gulp dev`
 
-## Deploying to Heroku
+## Setting up Heroku with Docker
 
 ```
 $ heroku create APP_NAME
@@ -29,6 +29,20 @@ $ heroku plugins:install heroku-docker
 $ heroku docker:init
 $ heroku docker:release
 $ heroku open
+```
+
+## Running in local Docker VM
+
+```
+$ docker-machine start default
+$ eval $(docker-machine env default)
+$ docker-compose up web
+```
+
+## Deploying
+
+```
+$ heroku docker:release
 ```
 
 ## Documentation

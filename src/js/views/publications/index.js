@@ -2,6 +2,10 @@ import React from 'react';
 
 export default () => {
 	return (
-		<div>Publications</div>
+		<div className="page">
+			<div className="content">
+				Publications
+			</div>
+		</div>
 	)
 }

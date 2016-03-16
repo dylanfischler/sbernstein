@@ -16,7 +16,7 @@ html, body {
 
 		.brand {
 			float:left;
-			margin: 12px; //try to do some real vertical centering later
+			padding: 12px $body-padding; //try to do some real vertical centering later
 			display: inline-block;
 
 			* { display:block; }
@@ -60,5 +60,14 @@ html, body {
 				}
 			}
 		}
+	}
+}
+
+// general layout stuff
+.page {
+	@include wrap();
+
+	& > .content {
+		padding: $body-padding;
 	}
 }

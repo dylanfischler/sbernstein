@@ -2,6 +2,10 @@ import React from 'react';
 
 export default () => {
 	return (
-		<div>Members</div>
+		<div className="page">
+			<div className="content">
+				Members
+			</div>
+		</div>
 	)
 }
