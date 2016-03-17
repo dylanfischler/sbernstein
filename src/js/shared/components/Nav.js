@@ -7,7 +7,7 @@ export default (props) => {
 			<div className="nav">
 				<div className="brand">
 					<span className="title">Steven L. Bernstein MD,PhD.</span>
-					<span className="subtitle">Lab of Molecular Research, Ophthalmology research group</span>
+					<span className="subtitle">Lab of Molecular Research, Ophthalmology Research Group</span>
 				</div>
 				<ul>
 					<li><Link to="/home" activeClassName="active">Home</Link></li>

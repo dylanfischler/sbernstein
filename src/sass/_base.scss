@@ -1,8 +1,37 @@
 // base
 html, body {
+	height: 100%;
 	font-family: $sans-serif;
 	font-weight: $fontNormal;
 	color: #000;
+	font-size: 17px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $sans-serif;
+    font-style: normal;
+    color: $body-gray-color;
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.page-wrap {
+	min-height: 100%;
+	margin: 0 auto;
+	margin-bottom: -$footer-height;
+}
+
+footer, .push {
+	height: $footer-height;
+}
+
+footer {
+	background: #000;
+	color: #fff;
+	font-size: 14px;
 }
 
 #nav-bar {
@@ -10,6 +39,7 @@ html, body {
 	height:70px;
 	background: #fff;
 	border-bottom: 1px solid #efefef; //temporary
+	overflow: hidden;
 
 	.nav {
 		@include wrap();
@@ -33,6 +63,7 @@ html, body {
 			display: inline-block;
 			vertical-align: middle;
 			float:right;
+			margin: 15px 0;
 
 			li {
 				display:inline;
@@ -53,9 +84,9 @@ html, body {
 					}
 
 					&.active {
-						border-color: $red-color;
+						border-color: $accent-color;
 
-						&:hover { border-color: $red-color; }
+						&:hover { border-color: $accent-color; }
 					}
 				}
 			}
@@ -64,10 +95,67 @@ html, body {
 }
 
 // general layout stuff
-.page {
+.page, .wrap {
 	@include wrap();
+}
 
-	& > .content {
-		padding: $body-padding;
+.page {
+	padding-bottom: 75px;
+}
+
+.content {
+	padding: $body-padding;
+	margin:0;
+	width:auto;
+}
+
+// copy styles
+p {
+	line-height: 1.5em !important;
+	color: $body-gray-color !important;
+}
+
+//slider
+.slick-slider {
+	margin-top:0px;
+
+	.slick-next, .slick-prev {
+		background: rgba(0,0,0,0.25);
+		color: #fff;
+		font-size: 15px;
+		height: 70px;
+		width: 40px;
+		@include transition();
+
+		&:hover {
+			background: rgba(0,0,0,0.5);
+		}
+
+		&:before {
+			display:none;
+		}
+	}
+
+	.slick-next {
+		right: 25px;
+	}
+	.slick-prev {
+		left: 25px;
+	}
+
+	.slick-slide {
+		height:auto;
+
+		img {
+			border-top:none;
+		}
+	}
+
+	.slick-dots {
+		li {
+			button:before {
+				font-size: 15px;
+			}
+		}
 	}
 }

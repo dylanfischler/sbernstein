@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 gulp.task('run-build', function(callback) {
   runSequence(
     'clean',
-    ['scss', 'vendorToDist'],
+    ['copy_static', 'scss', 'vendorToDist'],
     'js',
     callback
   );
@@ -62,8 +62,8 @@ gulp.task('js', function(){
 
 // copy static files
 gulp.task('copy_static', function(){
-  return gulp.src(['src/index.html'])
-    .pipe(gulp.dest('dist'));
+  return gulp.src(['src/assets/**/*'])
+    .pipe(gulp.dest('dist/assets'));
 });
 
 gulp.task('watch', function() {

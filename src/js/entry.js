@@ -3,7 +3,8 @@ import { render } from 'react-dom';
 import { IndexRoute, Router, Route, browserHistory, IndexRedirect } from 'react-router';
 // import Routes from './navigation/Routes';
 //components
-import Nav from './navigation/Nav';
+import Nav from './shared/components/Nav';
+import Footer from './shared/components/Footer';
 //views
 import Home from './views/home';
 import Research from './views/research';
@@ -14,10 +15,14 @@ import Gallery from './views/gallery';
 export class App extends React.Component {
     render() {
         return (
-        	<div>
-        		<Nav />
-        		{this.props.children}
-        	</div>
+            <div>
+            	<div className="page-wrap">
+            		<Nav />
+            		{this.props.children}
+                    <div className="push" />
+                </div>
+                <Footer />
+            </div>
         );
     }
 }
